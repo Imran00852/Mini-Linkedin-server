@@ -32,6 +32,7 @@ export const register = async (req, res) => {
       })
       .json({
         success: true,
+        user: newUser,
         msg: `welcome ${newUser.username}`,
       });
   } catch (err) {
@@ -73,6 +74,7 @@ export const login = async (req, res) => {
       })
       .json({
         success: true,
+        user,
         msg: `welcome back ${user.username}`,
       });
   } catch (err) {
